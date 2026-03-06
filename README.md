@@ -8,13 +8,18 @@ Inicialmente é utilizado Dockerfile com makefile para automatizar a construçã
 provisionamento do container com python e o netmiko instalados.
 
 ```
-image-readme/
-│
+
+
+├── docker/
+│ ├── Dockerfile
+├── image-readme/
+│ ├── image.png
+├── inventory/
+│ ├── __init_.py
+└── switch_group.py
 ├── scripts/ 
 │ ├── primeiroScript.py 
-│ └── show_interface_summary.py 
-│ ├── app.py 
-├── Dockerfile 
+│ └── show_interface_summary.py  
 ├── Makefile 
 ├── requirements.txt 
 └── README.md
