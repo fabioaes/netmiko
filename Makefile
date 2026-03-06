@@ -2,7 +2,7 @@ APP_NAME = netmiko-app
 
 # Build da imagem
 build:
-	docker build -t $(APP_NAME) .
+	docker build -f docker/Dockerfile -t $(APP_NAME) .
 
 # Deploy / inicia container interativo
 deploy: build

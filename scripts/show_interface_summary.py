@@ -1,21 +1,8 @@
 from netmiko import ConnectHandler
-
-device = {
-    "device_type": "cisco_ios",
-    "host": "192.168.150.131",
-    "username": "admin",
-    "password": "admin",
-    "port": 22,
-    
-    # IMPORTANTE para IOU antigo
-    "disabled_algorithms": {
-        "pubkeys": [],
-        "kex": [],
-    }
-}
+from inventory.switch_group import switches
 
 try:
-    connection = ConnectHandler(**device)
+    connection = ConnectHandler(**switches["cisco_L2"])
     print("Conectado com sucesso!\n")
 
     output = connection.send_command("show interface summary")
